@@ -270,3 +270,33 @@ console.log(str + " jeju");
 // var number1 = prompt('1번째 숫자');
 // var number2 = prompt('2번째 숫자');
 // alert(parseInt(number1) + parseInt(number2));
+
+var todos = [];
+function Create(todos, todo) {
+  todos.push(todo);
+}
+function Read(todos) {
+  todos.forEach((element) => {
+    console.log(element);
+  });
+}
+function Update(todos, oldtodo, updatetodo) {
+  var updateIndex = todos.findIndex((element) => {
+    return element === oldtodo;
+  });
+  todos[updateIndex] = updatetodo;
+}
+function Delete(todos, deletetodo) {
+  var deleteIndex = todos.findIndex((element) => {
+    return element === deletetodo;
+  });
+  todos.splice(deleteIndex, 1);
+}
+
+Create(todos, "안녕");
+Create(todos, "반가워");
+Read(todos);
+Update(todos, "반가워", "하세요");
+Read(todos);
+Delete(todos, "하세요");
+Read(todos);
