@@ -1,0 +1,25 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap {
+  width: 100%;
+}
+
+.article {
+  justify-content: center;
+  text-align: center;
+  width: 110px;
+  margin: 20px;
+  float: left;
+}
+.title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  display: block;
+}
+.artimg {
+  border: 1px black solid;
+}
